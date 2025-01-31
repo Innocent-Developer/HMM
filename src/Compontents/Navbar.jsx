@@ -1,5 +1,5 @@
 import { useState } from "react";
-// import { NavLink } from "react-router-dom"; // ✅ Import NavLink correctly
+import { NavLink } from "react-router-dom"; // ✅ Import NavLink correctly
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -57,8 +57,8 @@ const Navbar = () => {
           <ul className="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
             {["Home", "About", "Services", "Pricing", "Contact"].map((item) => (
               <li key={item}>
-                <a
-                  href={`/${item.toLowerCase()}`}
+                <NavLink
+                  to={`/${item.toLowerCase()}`}
                   onClick={closeMenu}
                   className={({ isActive }) =>
                     `block py-2 px-3 rounded-sm ${
@@ -69,7 +69,7 @@ const Navbar = () => {
                   }
                 >
                   {item}
-                </a>
+                </NavLink>
               </li>
             ))}
           </ul>
