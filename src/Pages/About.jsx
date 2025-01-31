@@ -1,4 +1,5 @@
 import React from "react";
+import Button from "../Compontents/Button";
 
 export const About = () => {
   return (
@@ -26,9 +27,7 @@ export const About = () => {
               <li>24/7 customer support</li>
             </ul>
             <div class="flex justify-center">
-              <button class="inline-flex text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg">
-                Book Now
-              </button>
+            <Button name="Book Now" />
             </div>
           </div>
           <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">

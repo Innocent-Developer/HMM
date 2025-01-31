@@ -20,10 +20,10 @@ export const Roomcontent = () => {
     </div>
   </div>
 </section> */}
-<div class="container mx-auto text-center py-24">
+{/* <div class="container mx-auto text-center py-24">
     <h2 class="text-3xl font-medium text-gray-900 mb-6">Rooms & Suites</h2>
     <p class="mb-12 text-gray-600">Discover our range of elegantly designed rooms and suites, each offering a perfect blend of comfort and sophistication.</p>
-    </div>
+    </div> */}
 
 {/* <section class="text-gray-600 body-font">
   <div class="container mx-auto text-center py-24">

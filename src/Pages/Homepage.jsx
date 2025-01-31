@@ -1,4 +1,5 @@
 import React from "react";
+import Button from "../Compontents/Button";
 
 export const Homepage = () => {
   return (
@@ -19,7 +20,7 @@ export const Homepage = () => {
               leisure, we ensure a stay that is both memorable and relaxing.
             </p>
             <h2 className="text-2xl font-bold mb-2">Book Your Stay Today</h2>
-            <button className="btn btn-primary">Book Now</button>
+            <Button name="Book Now" />
           </div>
         </div>
       </div>
