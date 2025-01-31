@@ -5,6 +5,7 @@ import { Footer } from './Compontents/Footer';
 import { Homepage } from './Pages/Homepage';
 import { About } from './Pages/About';
 import { CArds } from './Pages/CArds';
+import { Login } from './Pages/Login';
 
 export const App = () => {
   return (
@@ -29,6 +30,7 @@ export const App = () => {
           
           <CArds />
         </>} />
+        <Route path="/account" element={<Login />} />
       </Routes>
       <Footer />
     </Router>
