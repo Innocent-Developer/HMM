@@ -13,7 +13,7 @@ export const Homepage = () => {
         <div className="hero-overlay bg-opacity-50"></div>
         <div className="hero-content text-center text-white">
           <div className="max-w-md">
-            <h1 className="text-4xl font-bold">Welcome to [Hotel Name]</h1>
+            <h1 className="text-4xl font-bold">Welcome to THE SEA</h1>
             <p className="py-6 text-1xl">
               Experience luxury, comfort, and world-class hospitality in the
               heart of Lahore. Whether you're traveling for business or

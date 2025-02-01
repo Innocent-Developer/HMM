@@ -11,7 +11,7 @@ export const About = () => {
               About Us
             </h1>
             <p class="mb-8 leading-relaxed dark:text-white">
-              At [Hotel Name], we take pride in offering unparalleled
+              At THE SEA, we take pride in offering unparalleled
               hospitality services tailored to our guests’ needs. Established in
               10, our hotel has been a symbol of elegance and sophistication,
               catering to travelers from around the world. Our team of dedicated
