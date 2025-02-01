@@ -1,6 +1,5 @@
 import React, { useState } from "react";
-// import { Calendar } from 'lucide-react';
-// import { Button } from '@/components/ui/button';
+import { Loader2 } from 'lucide-react';
 
 export default function HotelBookingForm() {
   const [checkIn, setCheckIn] = useState("");
@@ -10,20 +9,26 @@ export default function HotelBookingForm() {
   const [Extras, setExtras] = useState("");
   const [numRooms, setNumRooms] = useState("");
   const [nonSmoking, setNonSmoking] = useState(false);
-  const [message, setMessage] = useState(""); // Added state for message
+  const [message, setMessage] = useState("");
+  const [loading, setLoading] = useState(false);
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log({
-      checkIn,
-      checkOut,
-      guests,
-      roomType,
-      Extras,
-      numRooms,
-      nonSmoking,
-      message, // Included message in form submission
-    });
+    setLoading(true);
+
+    setTimeout(() => {
+      console.log({
+        checkIn,
+        checkOut,
+        guests,
+        roomType,
+        Extras,
+        numRooms,
+        nonSmoking,
+        message,
+      });
+      setLoading(false);
+    }, 2000);
   };
 
   return (
@@ -34,37 +39,29 @@ export default function HotelBookingForm() {
       >
         <div className="text-center">
           <h1 className="text-3xl font-bold text-gray-800">HOTEL BY THE SEA</h1>
-          <p className="text-sm text-gray-600">
-            1901 Thornridge Cir. Shiloh, Hawaii 81063
-          </p>
+          <p className="text-sm text-gray-600">1901 Thornridge Cir. Shiloh, Hawaii 81063</p>
           <p className="text-sm text-gray-600">+1 (808) 555-0111</p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           <div>
             <label className="block text-gray-700">Check-in</label>
-            <div className="relative">
-              <input
-                type="date"
-                value={checkIn}
-                onChange={(e) => setCheckIn(e.target.value)}
-                className="w-full p-2 border border-gray-300 rounded-lg shadow-sm"
-              />
-              {/* <Calendar className="absolute right-3 top-2.5 text-gray-400" /> */}
-            </div>
+            <input
+              type="date"
+              value={checkIn}
+              onChange={(e) => setCheckIn(e.target.value)}
+              className="w-full p-2 border border-gray-300 rounded-lg shadow-sm"
+            />
           </div>
 
           <div>
             <label className="block text-gray-700">Check-out</label>
-            <div className="relative">
-              <input
-                type="date"
-                value={checkOut}
-                onChange={(e) => setCheckOut(e.target.value)}
-                className="w-full p-2 border border-gray-300 rounded-lg shadow-sm"
-              />
-              {/* <Calendar className="absolute right-3 top-2.5 text-gray-400" /> */}
-            </div>
+            <input
+              type="date"
+              value={checkOut}
+              onChange={(e) => setCheckOut(e.target.value)}
+              className="w-full p-2 border border-gray-300 rounded-lg shadow-sm"
+            />
           </div>
 
           <div>
@@ -76,9 +73,7 @@ export default function HotelBookingForm() {
             >
               <option value="">Select</option>
               {[1, 2, 3, 4, 5].map((num) => (
-                <option key={num} value={num}>
-                  {num}
-                </option>
+                <option key={num} value={num}>{num}</option>
               ))}
             </select>
           </div>
@@ -120,9 +115,7 @@ export default function HotelBookingForm() {
             >
               <option value="">Select</option>
               {[1, 2, 3, 4, 5].map((num) => (
-                <option key={num} value={num}>
-                  {num}
-                </option>
+                <option key={num} value={num}>{num}</option>
               ))}
             </select>
           </div>
@@ -157,9 +150,11 @@ export default function HotelBookingForm() {
 
         <button
           type="submit"
-          className="w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700 transition"
+          className="w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700 transition flex items-center justify-center"
+          disabled={loading}
         >
-          Book Now
+          {loading ? <Loader2 className="animate-spin h-5 w-5 mr-2" /> : null}
+          {loading ? "Processing..." : "Book Now"}
         </button>
       </form>
     </div>
