@@ -7,6 +7,8 @@ import { About } from './Pages/About';
 import { CArds } from './Pages/CArds';
 // import { Login } from './Pages/Login';
 import HotelBookingForm from './Pages/Booking';
+import { Gallery } from './Pages/Gallery';
+import ClientReviews from './Pages/Clint/Clintrev';
 
 export const App = () => {
   return (
@@ -17,21 +19,23 @@ export const App = () => {
           <Homepage />
           <About />
           <CArds />
+          <Gallery />
+          <ClientReviews />
           
         </>} />
         <Route path="/home" element={<>
           <Homepage />
           <About />
-      
           <CArds />
+          <Gallery />
+          <ClientReviews />
 
         </>} />
         <Route path="/about" element={<About />} />
         <Route path="/services" element={<>
-          
           <CArds />
         </>} />
-        <Route path="/account" element={<><HotelBookingForm /></>} />
+        <Route path="/Book-Now" element={<><HotelBookingForm /></>} />
       </Routes>
       <Footer />
     </Router>
