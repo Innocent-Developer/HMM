@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import styled from "styled-components";
@@ -9,13 +9,14 @@ export const Login = () => {
     email: "",
     password: "",
   });
-
+  const navgation=useNavigate()
   const [loading, setLoading] = useState(false);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
     setSignin((prevState) => ({ ...prevState, [name]: value }));
   };
+
 
   const handleSignup = (e) => {
     e.preventDefault();
@@ -35,6 +36,8 @@ export const Login = () => {
         draggable: true,
         progress: undefined,
       });
+      setSignin({ email: "", password: "" }); // Clear form fields
+      navgation(`/Book-Now`);
     }, 2000);
   };
 
