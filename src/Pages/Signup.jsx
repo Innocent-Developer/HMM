@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import styled from "styled-components";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 export const Signup = () => {
   const [signup, setsignup] = useState({
@@ -24,6 +26,7 @@ export const Signup = () => {
     setLoading(true);
     setTimeout(() => {
       console.log("Form Submitted:", signup);
+      toast.success("Signup Successful!");
       setLoading(false);
     }, 2000);
   };
@@ -107,6 +110,7 @@ export const Signup = () => {
           Already have an account? <NavLink to="/account/login">Sign in</NavLink>
         </span>
       </div>
+      <ToastContainer position="top-center" autoClose={3000} />
     </StyledWrapper>
   );
 };

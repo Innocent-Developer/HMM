@@ -1,60 +1,74 @@
-import React, { useState } from 'react';
-import { NavLink } from 'react-router-dom';
-import styled from 'styled-components';
+import React, { useState } from "react";
+import { NavLink } from "react-router-dom";
+import { toast, ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import styled from "styled-components";
 
 export const Login = () => {
-  const [login, setLogin] = useState({ email: '', password: '' });
+  const [signin, setSignin] = useState({
+    email: "",
+    password: "",
+  });
+
   const [loading, setLoading] = useState(false);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setLogin((prevState) => ({ ...prevState, [name]: value }));
-    login({email: '', password: ''})
+    setSignin((prevState) => ({ ...prevState, [name]: value }));
   };
 
-  const handleLogin = (e) => {
+  const handleSignup = (e) => {
     e.preventDefault();
     setLoading(true);
-    setTimeout(() => { 
-      console.log('Form Submitted:', login);
+
+    setTimeout(() => {
+      console.log("Form Submitted:", signin);
       setLoading(false);
+
+      // Trigger toast after successful submission
+      toast.success("Login Successful", {
+        position: "top-right",
+        autoClose: 3000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+      });
     }, 2000);
   };
 
   return (
     <StyledWrapper>
+      <ToastContainer /> {/* Toast Container */}
       <div className="container">
-        <div className="heading">Sign In</div>
-        <form className="form" onSubmit={handleLogin}>
+        <div className="heading">Sign in</div>
+        <form className="form" onSubmit={handleSignup}>
           <input
             required
             className="input"
             type="email"
             name="email"
-            id="email"
             placeholder="E-mail"
-            value={login.email}
+            value={signin.email}
             onChange={handleChange}
             disabled={loading}
           />
+
           <input
             required
             className="input"
             type="password"
             name="password"
-            id="password"
             placeholder="Password"
-            value={login.password}
+            value={signin.password}
             onChange={handleChange}
             disabled={loading}
           />
-          <span className="forgot-password">
-            <a href="/">Forgot Password?</a>
-          </span>
           <input
             className="login-button"
             type="submit"
-            value={loading ? 'Signing In...' : 'Sign In'}
+            value={loading ? "Signing in..." : "Sign in"}
             disabled={loading}
           />
         </form>
@@ -62,7 +76,7 @@ export const Login = () => {
         {loading && <div className="loader"></div>}
 
         <span className="agreement">
-          <NavLink to="/account/sigup">Sign up</NavLink>
+          Already have an account? <NavLink to="/account/signup">Sign up</NavLink>
         </span>
       </div>
     </StyledWrapper>
@@ -78,10 +92,10 @@ const StyledWrapper = styled.div`
 
   .container {
     max-width: 350px;
-    background: linear-gradient(0deg, rgb(255, 255, 255) 0%, rgb(244, 247, 251) 100%);
+    background: linear-gradient(0deg, #fff 0%, #f4f7fb 100%);
     border-radius: 40px;
     padding: 25px 35px;
-    border: 5px solid rgb(255, 255, 255);
+    border: 5px solid #fff;
     box-shadow: rgba(133, 189, 215, 0.88) 0px 30px 30px -20px;
     margin: 20px;
   }
@@ -90,7 +104,7 @@ const StyledWrapper = styled.div`
     text-align: center;
     font-weight: 900;
     font-size: 30px;
-    color: rgb(16, 137, 211);
+    color: #1089d3;
   }
 
   .form {
@@ -113,23 +127,11 @@ const StyledWrapper = styled.div`
     border-inline: 2px solid #12b1d1;
   }
 
-  .form .forgot-password {
-    display: block;
-    margin-top: 10px;
-    margin-left: 10px;
-  }
-
-  .form .forgot-password a {
-    font-size: 11px;
-    color: #0099ff;
-    text-decoration: none;
-  }
-
   .form .login-button {
     display: block;
     width: 100%;
     font-weight: bold;
-    background: linear-gradient(45deg, rgb(16, 137, 211) 0%, rgb(18, 177, 209) 100%);
+    background: linear-gradient(45deg, #1089d3 0%, #12b1d1 100%);
     color: white;
     padding-block: 15px;
     margin: 20px auto;
@@ -156,12 +158,16 @@ const StyledWrapper = styled.div`
     width: 30px;
     height: 30px;
     animation: spin 1s linear infinite;
-    margin: 10px auto;
+    margin: 20px auto;
   }
 
   @keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
   }
 
   .agreement {
@@ -173,6 +179,6 @@ const StyledWrapper = styled.div`
   .agreement a {
     text-decoration: none;
     color: #0099ff;
-    font-size: 20px;
+    font-size: 16px;
   }
 `;

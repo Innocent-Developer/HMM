@@ -8,8 +8,8 @@ import { CArds } from './Pages/CArds';
 import HotelBookingForm from './Pages/Booking';
 import { Gallery } from './Pages/Gallery';
 import ClientReviews from './Pages/Clint/Clintrev';
-import { Login } from './Pages/Login';
 import { Signup } from './Pages/Signup';
+import { Login } from './Pages/Login';
 
 export const App = () => {
   return (
@@ -38,7 +38,7 @@ export const App = () => {
         </>} />
         <Route path="/Book-Now" element={<><HotelBookingForm /></>} />
         <Route path="/account/login" element={<><Login /></>} />
-        <Route path="/account/sigup" element={<><Signup /></>} />
+        <Route path="/account/signup" element={<><Signup /></>} />
       </Routes>
       <Footer />
     </Router>

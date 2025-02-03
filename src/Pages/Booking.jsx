@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import { Loader2 } from 'lucide-react';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 export default function HotelBookingForm() {
   const [checkIn, setCheckIn] = useState("");
@@ -28,14 +30,18 @@ export default function HotelBookingForm() {
         message,
       });
       setLoading(false);
+      toast.success("Booking Successful!");
     }, 2000);
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-b from-blue-100 to-white p-6">
+    <div
+      className="min-h-screen flex items-center justify-center bg-cover bg-center p-6"
+      style={{ backgroundImage: 'url(https://images.unsplash.com/photo-1564501049412-61c2a3083791?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fGhvdGVsfGVufDB8fDB8fHww)' }}
+    >
       <form
         onSubmit={handleSubmit}
-        className="bg-white shadow-lg rounded-2xl p-8 w-full max-w-2xl space-y-6"
+        className="bg-white bg-opacity-90 shadow-lg rounded-2xl p-8 w-full max-w-2xl space-y-6"
       >
         <div className="text-center">
           <h1 className="text-3xl font-bold text-gray-800">HOTEL BY THE SEA</h1>
@@ -157,6 +163,7 @@ export default function HotelBookingForm() {
           {loading ? "Processing..." : "Book Now"}
         </button>
       </form>
+      <ToastContainer />
     </div>
   );
 }
