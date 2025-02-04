@@ -1,16 +1,21 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { NavLink, useNavigate } from "react-router-dom";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import styled from "styled-components";
 
 export const Login = () => {
-  const [signin, setSignin] = useState({
-    email: "",
-    password: "",
-  });
-  const navgation = useNavigate();
+  const [signin, setSignin] = useState({ email: "", password: "" });
+  const navigate = useNavigate();
   const [loading, setLoading] = useState(false);
+
+  // Check if user is already logged in
+  useEffect(() => {
+    const userData = JSON.parse(localStorage.getItem("userData"));
+    if (userData) {
+      navigate("/Book-Now");
+    }
+  }, [navigate]);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -25,6 +30,9 @@ export const Login = () => {
       console.log("Form Submitted:", signin);
       setLoading(false);
 
+      // Store user data in localStorage
+      localStorage.setItem("userData", JSON.stringify(signin));
+
       toast.success("Login Successful", {
         position: "top-right",
         autoClose: 3000,
@@ -34,15 +42,16 @@ export const Login = () => {
         draggable: true,
         progress: undefined,
       });
+
       setSignin({ email: "", password: "" });
-      navgation(`/Book-Now`);
+      navigate(`/Book-Now`);
     }, 2000);
   };
 
   return (
     <StyledWrapper>
       <ToastContainer />
-      <div className="container">
+      <div className="container" data-aos="fade-up">
         <div className="heading">Sign in</div>
         <form className="form" onSubmit={handleSignup}>
           <input
@@ -66,8 +75,9 @@ export const Login = () => {
             onChange={handleChange}
             disabled={loading}
           />
+
           <input
-            className="login-button cursor:pointer"
+            className="login-button"
             type="submit"
             value={loading ? "Signing in..." : "Sign in"}
             disabled={loading}
@@ -77,7 +87,7 @@ export const Login = () => {
         {loading && <div className="loader"></div>}
 
         <span className="agreement">
-          Already have an account? <NavLink to="/account/signup">Sign up</NavLink>
+          Don’t have an account? <NavLink to="/account/signup">Sign up</NavLink>
         </span>
       </div>
     </StyledWrapper>
@@ -141,7 +151,7 @@ const StyledWrapper = styled.div`
     box-shadow: rgba(133, 189, 215, 0.88) 0px 20px 10px -15px;
     border: none;
     transition: all 0.2s ease-in-out;
-    cursor:pointer;
+    cursor: pointer;
   }
 
   .form .login-button:hover {

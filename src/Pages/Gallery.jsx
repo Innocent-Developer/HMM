@@ -15,21 +15,21 @@ export const Gallery = () => {
           </div>
           <div class="flex flex-wrap md:-m-2 -m-1">
             <div class="flex flex-wrap w-1/2">
-              <div class="md:p-2 p-1 w-1/2">
-                <img
+              <div class="md:p-2 p-1 w-1/2"  data-aos="zoom-in-right" data-aos-duration="1000">
+                <img 
                   alt="gallery"
                   class="w-full object-cover h-full object-center block"
                   src="https://themewagon.github.io/keto/images/blog1.jpg"
                 />
               </div>
-              <div class="md:p-2 p-1 w-1/2">
+              <div class="md:p-2 p-1 w-1/2"  data-aos="zoom-in-right" data-aos-duration="1000">
                 <img
                   alt="gallery"
                   class="w-full object-cover h-full object-center block"
                   src="https://themewagon.github.io/keto/images/blog2.jpg"
                 />
               </div>
-              <div class="md:p-2 p-1 w-full">
+              <div class="md:p-2 p-1 w-full"  data-aos="zoom-in-right" data-aos-duration="1000">
                 <img
                   alt="gallery"
                   class="w-full h-full object-cover object-center block"
@@ -38,21 +38,21 @@ export const Gallery = () => {
               </div>
             </div>
             <div class="flex flex-wrap w-1/2">
-              <div class="md:p-2 p-1 w-full">
+              <div class="md:p-2 p-1 w-full"  data-aos="zoom-in-right" data-aos-duration="1000">
                 <img
                   alt="gallery"
                   class="w-full h-full object-cover object-center block"
                   src="https://themewagon.github.io/keto/images/room1.jpg"
                 />
               </div>
-              <div class="md:p-2 p-1 w-1/2">
+              <div class="md:p-2 p-1 w-1/2"  data-aos="zoom-in-right" data-aos-duration="1000">
                 <img
                   alt="gallery"
                   class="w-full object-cover h-full object-center block"
                   src="https://themewagon.github.io/keto/images/room2.jpg"
                 />
               </div>
-              <div class="md:p-2 p-1 w-1/2">
+              <div class="md:p-2 p-1 w-1/2"  data-aos="zoom-in-right" data-aos-duration="1000">
                 <img
                   alt="gallery"
                   class="w-full object-cover h-full object-center block"

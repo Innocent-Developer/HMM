@@ -16,7 +16,13 @@ export const CArds = () => {
               </p>
             </div>
             <div class="p-4 md:w-1/3">
-              <div class="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden hover:shadow-xl transition-shadow hover:cursor-pointer bg-gradient-to-b from-blue-100 to-white ">
+              <div
+                className="bg-gradient-to-b  p-6"
+                data-aos="flip-left"
+                data-aos-easing="ease-out-cubic"
+                data-aos-duration="2000"
+                class="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden hover:shadow-xl transition-shadow hover:cursor-pointer bg-gradient-to-b from-blue-100 to-white "
+              >
                 <img
                   class="lg:h-48 md:h-36 w-full object-cover object-center"
                   src="https://plus.unsplash.com/premium_photo-1678762058107-dda70fa64d70?q=80&w=1528&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
@@ -65,7 +71,7 @@ export const CArds = () => {
                         <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
                         <circle cx="12" cy="12" r="3"></circle>
                       </svg>
-                      1.2K
+                      2.2K
                     </span>
                     <span class="text-gray-400 inline-flex items-center leading-none text-sm">
                       <svg
@@ -79,14 +85,20 @@ export const CArds = () => {
                       >
                         <path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"></path>
                       </svg>
-                      6
+                      67
                     </span>
                   </div>
                 </div>
               </div>
             </div>
             <div class="p-4 md:w-1/3">
-              <div class="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden hover:shadow-xl transition-shadow hover:cursor-pointer bg-gradient-to-b from-blue-100 to-white">
+              <div
+                className="bg-gradient-to-b  p-6"
+                data-aos="flip-left"
+                data-aos-easing="ease-out-cubic"
+                data-aos-duration="2000"
+                class="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden hover:shadow-xl transition-shadow hover:cursor-pointer bg-gradient-to-b from-blue-100 to-white"
+              >
                 <img
                   class="lg:h-48 md:h-36 w-full object-cover object-center"
                   src="https://images.unsplash.com/photo-1597106525363-7916ebf5b083?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
@@ -135,7 +147,7 @@ export const CArds = () => {
                         <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
                         <circle cx="12" cy="12" r="3"></circle>
                       </svg>
-                      1.2K
+                      1.9K
                     </span>
                     <span class="text-gray-400 inline-flex items-center leading-none text-sm">
                       <svg
@@ -149,14 +161,20 @@ export const CArds = () => {
                       >
                         <path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"></path>
                       </svg>
-                      6
+                      850
                     </span>
                   </div>
                 </div>
               </div>
             </div>
             <div class="p-4 md:w-1/3">
-              <div class="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden hover:shadow-xl transition-shadow hover:cursor-pointer bg-gradient-to-b from-blue-100 to-white">
+              <div
+                className="bg-gradient-to-b  p-6"
+                data-aos="flip-left"
+                data-aos-easing="ease-out-cubic"
+                data-aos-duration="2000"
+                class="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden hover:shadow-xl transition-shadow hover:cursor-pointer bg-gradient-to-b from-blue-100 to-white"
+              >
                 <img
                   class="lg:h-48 md:h-36 w-full object-cover object-center"
                   src="https://plus.unsplash.com/premium_photo-1661413083346-f2c11d9c0a77?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
@@ -204,7 +222,7 @@ export const CArds = () => {
                         <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
                         <circle cx="12" cy="12" r="3"></circle>
                       </svg>
-                      1.2K
+                      5.2K
                     </span>
                     <span class="text-gray-400 inline-flex items-center leading-none text-sm">
                       <svg
@@ -218,7 +236,7 @@ export const CArds = () => {
                       >
                         <path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"></path>
                       </svg>
-                      6
+                      650
                     </span>
                   </div>
                 </div>
@@ -232,7 +250,13 @@ export const CArds = () => {
         <div class="container px-5 py-24 mx-auto">
           <div class="flex flex-wrap -m-4">
             <div class="p-4 md:w-1/3">
-              <div class="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden hover:shadow-xl transition-shadow hover:cursor-pointer bg-gradient-to-b from-blue-100 to-white">
+              <div
+                className="bg-gradient-to-b  p-6"
+                data-aos="flip-left"
+                data-aos-easing="ease-out-cubic"
+                data-aos-duration="2000"
+                class="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden hover:shadow-xl transition-shadow hover:cursor-pointer bg-gradient-to-b from-blue-100 to-white"
+              >
                 <img
                   class="lg:h-48 md:h-36 w-full object-cover object-center"
                   src="https://plus.unsplash.com/premium_photo-1661876306620-f2f2989f8f8b?q=80&w=1384&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
@@ -302,7 +326,12 @@ export const CArds = () => {
               </div>
             </div>
             <div class="p-4 md:w-1/3">
-              <div class="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden hover:shadow-xl transition-shadow hover:cursor-pointer bg-gradient-to-b from-blue-100 to-white">
+              <div
+                data-aos="flip-left"
+                data-aos-easing="ease-out-cubic"
+                data-aos-duration="2000"
+                class="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden hover:shadow-xl transition-shadow hover:cursor-pointer bg-gradient-to-b from-blue-100 to-white"
+              >
                 <img
                   class="lg:h-48 md:h-36 w-full object-cover object-center"
                   src="https://plus.unsplash.com/premium_photo-1663126298656-33616be83c32?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8aG90ZWwlMjBFeGVjdXRpdmUlMjBTdWl0ZSU3QlNwYWNpb3VzJTIwYW5kJTIwZWxlZ2FudGx5JTIwZGVzaWduZWQlMkMlMjBpZGVhbCUyMGZvciUyMGJ1c2luZXNzJTIwdHJhdmVsZXJzJTIwd2l0aCUyMGV4dHJhJTIwY29tZm9ydCUyMGFuZCUyMHNlcnZpY2VzLiU3RHxlbnwwfHwwfHx8MA%3D%3D"
@@ -372,7 +401,12 @@ export const CArds = () => {
               </div>
             </div>
             <div class="p-4 md:w-1/3">
-              <div class="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden hover:shadow-xl transition-shadow hover:cursor-pointer bg-gradient-to-b from-blue-100 to-white" >
+              <div
+                data-aos="flip-left"
+                data-aos-easing="ease-out-cubic"
+                data-aos-duration="2000"
+                class="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden hover:shadow-xl transition-shadow hover:cursor-pointer bg-gradient-to-b from-blue-100 to-white"
+              >
                 <img
                   class="lg:h-48 md:h-36 w-full object-cover object-center"
                   src="https://plus.unsplash.com/premium_photo-1661884238187-1c274b3c3413?q=80&w=1632&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"

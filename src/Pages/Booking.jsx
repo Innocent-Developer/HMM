@@ -31,11 +31,13 @@ export default function HotelBookingForm() {
       });
       setLoading(false);
       toast.success("Booking Successful!");
+      // localStorage.removeItem("userData");
     }, 2000);
   };
 
   return (
     <div
+    data-aos="fade-up"
       className="min-h-screen flex items-center justify-center bg-cover bg-center p-6"
       style={{ backgroundImage: 'url(https://images.unsplash.com/photo-1564501049412-61c2a3083791?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fGhvdGVsfGVufDB8fDB8fHww)' }}
     >

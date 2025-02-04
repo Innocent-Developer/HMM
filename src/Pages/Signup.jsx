@@ -33,7 +33,7 @@ export const Signup = () => {
 
   return (
     <StyledWrapper>
-      <div className="container">
+      <div className="container" data-aos="fade-down">
         <div className="heading">Sign Up</div>
         <form className="form" onSubmit={handleSignup}>
           <input

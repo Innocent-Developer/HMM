@@ -10,6 +10,10 @@ import { Gallery } from './Pages/Gallery';
 import ClientReviews from './Pages/Clint/Clintrev';
 import { Signup } from './Pages/Signup';
 import { Login } from './Pages/Login';
+import AOS from 'aos';
+import 'aos/dist/aos.css'; 
+
+AOS.init();
 
 export const App = () => {
   return (

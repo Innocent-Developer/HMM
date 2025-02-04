@@ -1,10 +1,15 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import styled from 'styled-components';
 
 const Button = (prop) => {
+  const navgations =useNavigate();
+  function navigation(){
+    navgations(`/account/login`);
+  }
   return (
     <StyledWrapper>
-      <button className="button">
+      <button className="button" data-aos="fade-down-right" onClick={navigation}>
         <span className="button-content">{prop.name} </span>
       </button>
     </StyledWrapper>
