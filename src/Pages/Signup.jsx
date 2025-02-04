@@ -114,17 +114,17 @@ export const Signup = () => {
     </StyledWrapper>
   );
 };
-
 const StyledWrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background-color: #f0f2f5;
+  background: url('https://images.unsplash.com/photo-1564501049412-61c2a3083791?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fGhvdGVsfGVufDB8fDB8fHww') no-repeat center center fixed;
+  background-size: cover;
 
   .container {
     max-width: 350px;
-    background: linear-gradient(0deg, #fff 0%, #f4f7fb 100%);
+    background: rgba(255, 255, 255, 0.9);
     border-radius: 40px;
     padding: 25px 35px;
     border: 5px solid #fff;
@@ -190,7 +190,7 @@ const StyledWrapper = styled.div`
     width: 30px;
     height: 30px;
     animation: spin 1s linear infinite;
-    margin: 10px auto;
+    margin: 20px auto;
   }
 
   @keyframes spin {

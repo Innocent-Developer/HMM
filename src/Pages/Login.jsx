@@ -9,14 +9,13 @@ export const Login = () => {
     email: "",
     password: "",
   });
-  const navgation=useNavigate()
+  const navgation = useNavigate();
   const [loading, setLoading] = useState(false);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
     setSignin((prevState) => ({ ...prevState, [name]: value }));
   };
-
 
   const handleSignup = (e) => {
     e.preventDefault();
@@ -26,7 +25,6 @@ export const Login = () => {
       console.log("Form Submitted:", signin);
       setLoading(false);
 
-      // Trigger toast after successful submission
       toast.success("Login Successful", {
         position: "top-right",
         autoClose: 3000,
@@ -36,14 +34,14 @@ export const Login = () => {
         draggable: true,
         progress: undefined,
       });
-      setSignin({ email: "", password: "" }); // Clear form fields
+      setSignin({ email: "", password: "" });
       navgation(`/Book-Now`);
     }, 2000);
   };
 
   return (
     <StyledWrapper>
-      <ToastContainer /> {/* Toast Container */}
+      <ToastContainer />
       <div className="container">
         <div className="heading">Sign in</div>
         <form className="form" onSubmit={handleSignup}>
@@ -69,7 +67,7 @@ export const Login = () => {
             disabled={loading}
           />
           <input
-            className="login-button"
+            className="login-button cursor:pointer"
             type="submit"
             value={loading ? "Signing in..." : "Sign in"}
             disabled={loading}
@@ -91,11 +89,12 @@ const StyledWrapper = styled.div`
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background-color: #f0f2f5;
+  background: url('https://images.unsplash.com/photo-1564501049412-61c2a3083791?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fGhvdGVsfGVufDB8fDB8fHww') no-repeat center center fixed;
+  background-size: cover;
 
   .container {
     max-width: 350px;
-    background: linear-gradient(0deg, #fff 0%, #f4f7fb 100%);
+    background: rgba(255, 255, 255, 0.9);
     border-radius: 40px;
     padding: 25px 35px;
     border: 5px solid #fff;
@@ -142,6 +141,7 @@ const StyledWrapper = styled.div`
     box-shadow: rgba(133, 189, 215, 0.88) 0px 20px 10px -15px;
     border: none;
     transition: all 0.2s ease-in-out;
+    cursor:pointer;
   }
 
   .form .login-button:hover {
