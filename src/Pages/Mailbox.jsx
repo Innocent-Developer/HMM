@@ -1,20 +1,41 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
+import { toast, ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Form = () => {
+  const [subscribe, setSubscribe] = useState({ email: "" });
+
+  const handleChange = (e) => {
+    setSubscribe({ ...subscribe, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    toast.success("Subscribed Successfully!");
+    console.log(subscribe);
+  };
+  
+
   return (
     <StyledWrapper>
-      <div className="subscribe" data-aos="fade-up" data-aos-duration="3000">
-        <p>SUBSCRIBE</p>
-        <input
-          placeholder="Your e-mail"
-          className="subscribe-input"
-          name="email"
-          type="email"
-        />
-        <br />
-        <div className="submit-btn">SUBMIT</div>
-      </div>
+      <form className="form" onSubmit={handleSubmit}>
+        <div className="subscribe" data-aos="fade-up" data-aos-duration="3000">
+          <p>SUBSCRIBE</p>
+          <input
+            placeholder="Your e-mail"
+            className="subscribe-input"
+            name="email"
+            type="email"
+            value={subscribe.email}
+            onChange={handleChange}
+            required
+          />
+          <br />
+          <button type="submit" className="submit-btn">SUBMIT</button>
+        </div>
+      </form>
+      <ToastContainer position="top-center" autoClose={3000} hideProgressBar={false} newestOnTop closeOnClick pauseOnHover theme="colored" />
     </StyledWrapper>
   );
 };
@@ -65,8 +86,7 @@ const StyledWrapper = styled.div`
   .subscribe input:focus {
     outline: none;
     border-bottom: 1px solid #0d095e;
-    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
-      "sans-serif";
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", "sans-serif";
   }
 
   .subscribe .submit-btn {
