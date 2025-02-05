@@ -1,5 +1,5 @@
-import React from 'react';
-import styled from 'styled-components';
+import React from "react";
+import styled from "styled-components";
 
 const Contact = () => {
   return (
@@ -15,11 +15,11 @@ const Contact = () => {
             <input required type="text" className="input" />
             <span>Last Name</span>
           </label>
-        </div>  
+        </div>
         <label>
           <input required type="email" className="input" />
           <span>Email</span>
-        </label> 
+        </label>
         <label>
           <input required type="tel" className="input" />
           <span>Contact Number</span>
@@ -28,11 +28,13 @@ const Contact = () => {
           <textarea required rows={4} className="textarea" defaultValue={""} />
           <span>Message</span>
         </label>
-        <button type="submit" className="button-gradient">Submit</button>
+        <button type="submit" className="button-gradient">
+          Submit
+        </button>
       </form>
     </StyledWrapper>
   );
-}
+};
 
 const StyledWrapper = styled.div`
   display: flex;
@@ -41,6 +43,10 @@ const StyledWrapper = styled.div`
   min-height: 100vh;
   background: linear-gradient(135deg, #ece9e6, #ffffff);
   padding: 20px;
+  height: 100vh;
+  background: url("https://plus.unsplash.com/premium_photo-1682001285904-0e59c1c87c59?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjV8fGhvdGVsJTIwZmVtYWxlfGVufDB8fDB8fHww")
+    no-repeat center center fixed;
+  background-size: cover;
 
   .form {
     background: #fff;
@@ -76,7 +82,8 @@ const StyledWrapper = styled.div`
     width: 100%;
   }
 
-  .input, .textarea {
+  .input,
+  .textarea {
     width: 100%;
     padding: 12px;
     border: 1px solid #ccc;
@@ -85,7 +92,8 @@ const StyledWrapper = styled.div`
     transition: all 0.3s;
   }
 
-  .input:focus, .textarea:focus {
+  .input:focus,
+  .textarea:focus {
     border-color: #6c63ff;
     box-shadow: 0 0 8px rgba(108, 99, 255, 0.5);
   }
@@ -101,7 +109,10 @@ const StyledWrapper = styled.div`
     pointer-events: none;
   }
 
-  .input:focus + span, .textarea:focus + span, .input:not(:placeholder-shown) + span, .textarea:not(:placeholder-shown) + span {
+  .input:focus + span,
+  .textarea:focus + span,
+  .input:not(:placeholder-shown) + span,
+  .textarea:not(:placeholder-shown) + span {
     top: -8px;
     left: 10px;
     font-size: 0.8em;

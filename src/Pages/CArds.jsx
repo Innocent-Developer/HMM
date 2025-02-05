@@ -3,8 +3,8 @@ import"./custom.css";
 
 export const CArds = () => {
   return (
-    <div id="card-page" className="bg-gradient-to-b  p-6 " >
-      <section class="text-gray-600 body-font ">
+    <div id="card-page" className="bg-gradient-to-b  p-6  bg-gray-50" >
+      <section class="text-gray-600 body-font min-h-screen  flex items-center justify-center p-6 ">
         <div class="container px-5 py-24 mx-auto">
           <div class="flex flex-wrap -m-4">
             <div class="container mx-auto text-center py-24">
