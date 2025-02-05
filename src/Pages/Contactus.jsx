@@ -44,12 +44,14 @@ const StyledWrapper = styled.div`
   background: linear-gradient(135deg, #ece9e6, #ffffff);
   padding: 20px;
   height: 100vh;
-  background: url("https://plus.unsplash.com/premium_photo-1682001285904-0e59c1c87c59?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjV8fGhvdGVsJTIwZmVtYWxlfGVufDB8fDB8fHww")
+  background: url("https://plus.unsplash.com/premium_photo-1661322641020-a691d8722839?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mzd8fGhvdGVsJTIwZmVtYWxlfGVufDB8fDB8fHww")
     no-repeat center center fixed;
   background-size: cover;
 
   .form {
-    background: #fff;
+    background: rgba(255, 255, 255, 0.2); /* Semi-transparent background */
+    backdrop-filter: blur(15px); /* Blur effect */
+    -webkit-backdrop-filter: blur(15px); /* Safari support */
     padding: 30px;
     border-radius: 20px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
@@ -58,6 +60,7 @@ const StyledWrapper = styled.div`
     display: flex;
     flex-direction: column;
     gap: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.3); /* Light border for better separation */
   }
 
   h2 {
