@@ -8,6 +8,7 @@ export const Login = () => {
   const [signin, setSignin] = useState({ email: "", password: "" });
   const navigate = useNavigate();
   const [loading, setLoading] = useState(false);
+  const id=`testidmail`;
 
   // Check if user is already logged in
   useEffect(() => {
@@ -44,7 +45,7 @@ export const Login = () => {
       });
 
       setSignin({ email: "", password: "" });
-      navigate(`/Book-Now`);
+      navigate(`/Book-Now/${id}`);
     }, 2000);
   };
 

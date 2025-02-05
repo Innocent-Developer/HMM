@@ -12,6 +12,8 @@ import { Signup } from './Pages/Signup';
 import { Login } from './Pages/Login';
 import AOS from 'aos';
 import 'aos/dist/aos.css'; 
+import { Updates } from './Pages/Updates';
+import Contact from './Pages/Contactus';
 
 AOS.init();
 
@@ -26,6 +28,7 @@ export const App = () => {
           <CArds />
           <Gallery />
           <ClientReviews />
+          <Updates />
           
         </>} />
         <Route path="/home" element={<>
@@ -34,15 +37,18 @@ export const App = () => {
           <CArds />
           <Gallery />
           <ClientReviews />
+          <Updates />
 
         </>} />
         <Route path="/about" element={<About />} />
         <Route path="/services" element={<>
           <CArds />
         </>} />
-        <Route path="/Book-Now" element={<><HotelBookingForm /></>} />
+        <Route path="/Book-Now" element={<><Login /></>} />
+        <Route path="/Book-Now/:id" element={<><HotelBookingForm /></>} />
         <Route path="/account/login" element={<><Login /></>} />
         <Route path="/account/signup" element={<><Signup /></>} />
+        <Route path="/contact" element={<><Contact /></>} />
       </Routes>
       <Footer />
     </Router>

@@ -1,8 +1,9 @@
 import React from "react";
+import"./custom.css";
 
 export const CArds = () => {
   return (
-    <div className="bg-gradient-to-b  p-6">
+    <div id="card-page" className="bg-gradient-to-b  p-6 " >
       <section class="text-gray-600 body-font ">
         <div class="container px-5 py-24 mx-auto">
           <div class="flex flex-wrap -m-4">

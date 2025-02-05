@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Loader2 } from 'lucide-react';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { useParams } from "react-router-dom";
 
 export default function HotelBookingForm() {
   const [checkIn, setCheckIn] = useState("");
@@ -13,6 +14,8 @@ export default function HotelBookingForm() {
   const [nonSmoking, setNonSmoking] = useState(false);
   const [message, setMessage] = useState("");
   const [loading, setLoading] = useState(false);
+  const {id} =useParams();
+
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -29,6 +32,7 @@ export default function HotelBookingForm() {
         nonSmoking,
         message,
       });
+      console.log(id);
       setLoading(false);
       toast.success("Booking Successful!");
       // localStorage.removeItem("userData");
