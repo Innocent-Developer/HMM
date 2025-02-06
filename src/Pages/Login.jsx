@@ -8,7 +8,7 @@ export const Login = () => {
   const [signin, setSignin] = useState({ email: "", password: "" });
   const navigate = useNavigate();
   const [loading, setLoading] = useState(false);
-  const id=`testidmail`;
+  const id=signin.email;
 
   // Check if user is already logged in
   useEffect(() => {
