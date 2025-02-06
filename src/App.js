@@ -14,6 +14,7 @@ import AOS from 'aos';
 import 'aos/dist/aos.css'; 
 import { Updates } from './Pages/Updates';
 import Contact from './Pages/Contactus';
+import HotelDashboard from './Pages/dashbord';
 
 AOS.init();
 
@@ -49,6 +50,7 @@ export const App = () => {
         <Route path="/account/login" element={<><Login /></>} />
         <Route path="/account/signup" element={<><Signup /></>} />
         <Route path="/contact" element={<><Contact /></>} />
+        <Route path="/dashboard/admin" element={<><HotelDashboard /></>} />
       </Routes>
       <Footer />
     </Router>
